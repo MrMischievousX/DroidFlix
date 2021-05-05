@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Card from "./components/Card"
+import Navbar from "./components/Navbar"
+import Home from "./components/Home"
+import requests from './requests.js'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Home />
+      <Card thumb={true}
+        title="Droidflix Originals"
+        fetchUrl={requests.fetchNetflixOriginals}
+      />
+      <Card thumb={false}
+        title="Top Trending"
+        fetchUrl={requests.fetchTrending}
+      />
+      <Card thumb={false}
+        title="Top Rated"
+        fetchUrl={requests.fetchTopRated}
+      />
+      <Card thumb={false}
+        title="Action Movies"
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Card thumb={false}
+        title="Horror Movies"
+        fetchUrl={requests.fetchHorrorMovies}
+      />
+      <Card thumb={false}
+        title="Romantic Movies"
+        fetchUrl={requests.fetchRomanceMovies}
+      />
+      <Card thumb={false}
+        title="Comedy Movies"
+        fetchUrl={requests.fetchComedyMovies}
+      />
+      <Card thumb={false}
+        title="Documentaries"
+        fetchUrl={requests.fetchDocumentaries}
+      />
+    </>
   );
 }
 
