@@ -1,4 +1,4 @@
-const api = process.env.api;
+const api = "e057c1c54b5e1bad35cdc1d8d3152acf" || process.env.api;
 
 const requests = {
     fetchActionMovies: `/discover/movie?api_key=${api}&with_genres=28`,
