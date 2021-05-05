@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from "../axios";
 import "../Css/Card.css"
+import Info from "./Info"
 import ScrollContainer from 'react-indiana-drag-scroll'
-function Card({ title, fetchUrl, thumb }) {
+function Card({ title, fetchUrl, thumb, id }) {
+    const [enable, setenable] = useState(false)
     const [movies, setmovies] = useState([])
     const url = "https://image.tmdb.org/t/p/w500/"
+    const [datas, setdata] = useState([])
 
     useEffect(() => {
         async function getData() {
@@ -15,21 +18,30 @@ function Card({ title, fetchUrl, thumb }) {
         getData();
     }, [fetchUrl])
 
+    const enables = () => {
+        setenable(false)
+    }
     return (
-        <div className="row">
-            <h1>{title}</h1>
-            <ScrollContainer className="scroll-container">
-                <div className="Card_Containers">
-                    {
-                        movies.map((value) => {
-                            return (
-                                <img key={value.id} className={thumb ? "Card_Container_thumb" : "Card_Container"} src={`${url}${thumb ? value.poster_path : value.backdrop_path}`} alt={value.name} />
-                            );
-                        })
-                    }
-                </div>
-            </ScrollContainer>
-        </div>
+        <>
+            <div className="row" id={id}>
+                <h1>{title}</h1>
+                <ScrollContainer className="scroll-container">
+                    <div className="Card_Containers" >
+                        {
+                            movies.map((value, i) => {
+                                return (
+                                    <img key={value.id} className={thumb ? "Card_Container_thumb" : "Card_Container"} src={`${url}${thumb ? value.poster_path : value.backdrop_path}`} alt={value.name} onClick={() => {
+                                        setdata(value)
+                                        setenable(true)
+                                    }} />
+                                );
+                            })
+                        }
+                    </div>
+                </ScrollContainer>
+            </div>
+            {enable ? <Info image={datas.poster_path} title={datas?.title || datas?.original_name || datas?.titlename || datas?.name} overview={datas.overview} release={datas.release_date} adult={datas.adult} language={datas.original_language} vote={datas.vote_average} enabling={enables} /> : ""}
+        </>
     )
 }
 

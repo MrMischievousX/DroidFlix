@@ -13,7 +13,6 @@ function Home() {
         }
         getData();
     }, [])
-    console.log(data)
     return (
         <div className="home"
             style={{
@@ -23,7 +22,7 @@ function Home() {
                 <h1>{data?.original_name || data?.titlename || data?.name}</h1>
                 <div className="press">
                     <button >Play</button>
-                    <button >Stream</button>
+                    <button >Start</button>
                 </div>
                 <p>{data.overview}</p>
             </div>

@@ -1,9 +1,9 @@
 .Navbar {
   position: fixed;
   width: 100vw;
-  padding: 1.1rem 0;
+  padding: 1.1rem 0 0 0;
   top: 0;
-  z-index: 1000;
+  z-index: 300;
   transition: all 450ms;
 }
 .logo {
@@ -29,16 +29,20 @@
   color: white;
   display: flex;
   align-items: center;
+  margin-top: -1rem;
 }
-.Navbar_icon > input {
+#myText {
   margin-right: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid white;
+  text-align: center;
+  padding: 0.1rem;
 }
-.Navbar_icon > input {
-  margin-right: 0.5rem;
-}
+
 .Navbar_icon > .icon {
   font-size: 1.2rem;
   cursor: pointer;
+  margin-top: 0.2rem;
 }
 @media screen and (max-width: 1024px) {
   .phone {
@@ -47,14 +51,27 @@
   .Navbar {
     position: fixed;
     width: 100vw;
-    padding: 0.8rem 0;
+    padding: 0.8rem 0 0.3rem 0;
     top: 0;
-    z-index: 1000;
+    z-index: 300;
     transition: all 450ms;
   }
   .logo {
     width: auto;
     height: 2.5rem;
     margin-top: 0;
+  }
+  #myText {
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid white;
+    width: 10rem;
+    padding: 0.1rem;
+    text-align: center;
+  }
+  .Navbar_icon > .icon {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    cursor: pointer;
   }
 }

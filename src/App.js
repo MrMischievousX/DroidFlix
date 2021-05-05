@@ -8,35 +8,35 @@ function App() {
     <>
       <Navbar />
       <Home />
-      <Card thumb={true}
+      <Card id="Droidflix" thumb={true}
         title="Droidflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
       />
-      <Card thumb={false}
+      <Card id="Trending" thumb={false}
         title="Top Trending"
         fetchUrl={requests.fetchTrending}
       />
-      <Card thumb={false}
+      <Card id="Rated" thumb={false}
         title="Top Rated"
         fetchUrl={requests.fetchTopRated}
       />
-      <Card thumb={false}
+      <Card id="Action" thumb={false}
         title="Action Movies"
         fetchUrl={requests.fetchActionMovies}
       />
-      <Card thumb={false}
+      <Card id="Horror" thumb={false}
         title="Horror Movies"
         fetchUrl={requests.fetchHorrorMovies}
       />
-      <Card thumb={false}
+      <Card id="Romantic" thumb={false}
         title="Romantic Movies"
         fetchUrl={requests.fetchRomanceMovies}
       />
-      <Card thumb={false}
+      <Card id="Comedy" thumb={false}
         title="Comedy Movies"
         fetchUrl={requests.fetchComedyMovies}
       />
-      <Card thumb={false}
+      <Card id="Documentaries" thumb={false}
         title="Documentaries"
         fetchUrl={requests.fetchDocumentaries}
       />
