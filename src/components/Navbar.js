@@ -21,7 +21,7 @@ function Navbar() {
     useEffect(() => {
         if (searchVal) {
             let value = searchVal.replace(" ", "%20")
-            axios.get(` https://api.themoviedb.org/3/search/movie?api_key=e057c1c54b5e1bad35cdc1d8d3152acf&language=en-US&query=${value}&page=1&include_adult=true`).then((res) => {
+            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_Api}&language=en-US&query=${value}&page=1&include_adult=true`).then((res) => {
                 if (res.data.results.length === 0) {
                     alert("Enter Correct Movie Name")
                 } else {
