@@ -22,7 +22,7 @@ function Home() {
                 <h1>{data?.original_name || data?.titlename || data?.name}</h1>
                 <div className="press">
                     <button >Play</button>
-                    <button >Start</button>
+                    <button >More</button>
                 </div>
                 <p>{data.overview}</p>
             </div>
