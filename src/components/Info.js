@@ -4,7 +4,6 @@ import "../Css/Info.css"
 function Info(props) {
     let check;
     props.adult ? check = "Yes" : check = "No";
-    console.log(props)
     return (
         <div className="info_container">
             <div className="info">

@@ -20,7 +20,15 @@
   color: white;
   font-size: 1.3rem;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+}
+.Navbar_items a:hover {
+  text-decoration: underline;
+  color: rgb(156, 236, 205);
+}
+.Navbar_items a:active {
+  text-decoration: underline;
+  color: rgb(255, 0, 0);
 }
 .Navbar_items a img {
   margin-top: -0.3rem;
