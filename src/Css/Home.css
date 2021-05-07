@@ -37,8 +37,16 @@
   background-color: rgba(255, 255, 255, 0.6);
 }
 .home p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   max-width: 80ch;
+  line-height: 1.8rem;
+  max-height: calc(1.8rem * 8);
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 8;
 }
 .home h1 {
   margin-bottom: 0;
@@ -71,6 +79,14 @@
   .home p {
     font-size: 1rem;
     max-width: 80ch;
+    line-height: 1.5rem;
+    max-height: calc(1.5rem * 8);
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 8;
   }
   .home h1 {
     margin-bottom: 0;
