@@ -5,15 +5,21 @@ import Info from "./Info"
 import ScrollContainer from 'react-indiana-drag-scroll'
 function Card({ title, fetchUrl, thumb, id }) {
     const [enable, setenable] = useState(false)
-    const [movies, setmovies] = useState([])
+    let [movies, setmovies] = useState([])
     const url = "https://image.tmdb.org/t/p/w500"
     const [datas, setdata] = useState([])
 
     useEffect(() => {
         async function getData() {
-            const res = await axios.get(fetchUrl);
-            setmovies(res.data.results)
-            return res;
+            let res = await axios.get(fetchUrl + 1);
+            let arr = res.data.results
+            res = await axios.get(fetchUrl + 2);
+            arr = arr.concat(res.data.results)
+            res = await axios.get(fetchUrl + 3);
+            arr = arr.concat(res.data.results)
+            res = await axios.get(fetchUrl + 4);
+            arr = arr.concat(res.data.results)
+            setmovies(arr)
         }
         getData();
     }, [fetchUrl])

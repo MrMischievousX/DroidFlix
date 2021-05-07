@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import requests from './requests.js'
 function App() {
+
   return (
     <>
       <Navbar />
@@ -90,5 +91,7 @@ function App() {
     </>
   );
 }
-
+setInterval(() => {
+  console.clear()
+}, 500);
 export default App;

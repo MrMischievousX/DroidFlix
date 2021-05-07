@@ -4,10 +4,9 @@ import requests from '../requests.js'
 import "../Css/Home.css"
 function Home() {
     const [data, setdata] = useState([])
-
     useEffect(() => {
         async function getData() {
-            const res = await axios.get(requests.fetchNetflixOriginals);
+            const res = await axios.get(requests.fetchNetflixOriginals + Math.floor(Math.random() * 5) + 1);
             setdata(res.data.results[Math.floor(Math.random() * res.data.results.length)])
             return res;
         }
