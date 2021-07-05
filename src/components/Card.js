@@ -35,14 +35,17 @@ function Card({ title, fetchUrl, thumb, id }) {
                     <div className="Card_Containers" >
                         {
                             movies.map((value, i) => {
-                                return (
-                                    <>
-                                        <img key={value.id} className={thumb ? "Card_Container_thumb" : "Card_Container"} src={`${url}${thumb ? value.poster_path : value.backdrop_path || value.poster_path}`} alt={value.title} onClick={() => {
-                                            setdata(value)
-                                            setenable(true)
-                                        }} />
-                                    </>
-                                );
+                                if (!value.backdrop_path)
+                                    return null
+                                else
+                                    return (
+                                        <>
+                                            <img key={value.id} className={thumb ? "Card_Container_thumb" : "Card_Container"} src={`${url}${thumb ? value.poster_path : value.backdrop_path}`} alt={value.title} onClick={() => {
+                                                setdata(value)
+                                                setenable(true)
+                                            }} />
+                                        </>
+                                    );
                             })
                         }
                     </div>

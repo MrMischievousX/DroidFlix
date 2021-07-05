@@ -91,7 +91,4 @@ function App() {
     </>
   );
 }
-setInterval(() => {
-  console.clear()
-}, 500);
 export default App;
