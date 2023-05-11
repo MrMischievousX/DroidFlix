@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+<p align="center">
+  <a>
+    <img width="300px" src="./src/components/logo.gif">
+  </a>
+  <h1 align="center">DROIDFLIX</h1>  
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br/>
 
-## Available Scripts
+# Introduction
 
-In the project directory, you can run:
+[DroidFlix](https://droid-flix.vercel.app/) is a web application that allows users to list latest movies and TV shows. The app was developed using the React.js framework and utilizes the TMDB (The Movie Database) API for fetching data.
 
-### `npm start`
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# :sparkles: Main Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Search for movies and TV shows.
+- View details about each title, including the release date and synopsis.
 
-### `npm test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# :camera_flash: Screenshots
 
-### `npm run build`
+<div align="center" style="margin:auto;width:100%;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;">
+<img width="100%" margin="30px" style="margin:20px;" src="./images/image_1.png">
+<img width="100%" margin="30px" style="margin:20px;" src="./images/image_2.png">
+<img width="100%" margin="30px" style="margin:20px;" src="./images/image_3.png">
+<img width="100%" margin="30px" style="margin:20px;" src="./images/image_4.png">
+<img width="100%" margin="30px" style="margin:20px;" src="./images/image_5.png">
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Once you have Flutter installed, you can clone this repository to your local machine:
 
-### `npm run eject`
+```js bash
+git clone https://github.com/MrMischievousX/DroidFlix.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Install dependencies:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Get your TMDB api key from [here](https://www.themoviedb.org/signup) and create .env file in root folder.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```js bash
+REACT_APP_Api = YOUR_API_KEY;
+```
 
-## Learn More
+<br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Disclaimer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+DroidFlix is a third-party app and is not affiliated with TMDB or any other content provider. Please exercise caution when using the app and make sure to comply with all applicable laws and regulations.
 
-### Code Splitting
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Contributing
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions to DroidFlix are welcome! If you'd like to contribute, please fork the repository and create a pull request with your changes.

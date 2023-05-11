@@ -2,8 +2,20 @@ import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import requests from "./requests.js";
+import { useEffect, useState } from "react";
+import Loader from "./components/Loader";
 
 function App() {
+  const [load, setLoad] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(true);
+    }, 1800);
+  }, []);
+
+  if (!load) return <Loader />;
+
   return (
     <>
       <Navbar />
