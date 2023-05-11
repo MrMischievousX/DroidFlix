@@ -29,6 +29,7 @@ function Card({ title, fetchUrl, thumb, id }) {
   const enables = () => {
     setenable(false);
   };
+
   return (
     <>
       <div className="row" id={id}>
@@ -36,7 +37,7 @@ function Card({ title, fetchUrl, thumb, id }) {
         <ScrollContainer className="scroll-container">
           <div className="Card_Containers">
             {movies.map((value, i) => {
-              if (!value.backdrop_path) return null;
+              if (!value.backdrop_path || !value.poster_path) return null;
               else
                 return (
                   <>
